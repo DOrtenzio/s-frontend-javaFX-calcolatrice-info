@@ -1,16 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.calcolatrice.HelloController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
-
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="439.0" prefWidth="662.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+  <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" minWidth="10.0" prefWidth="17.399998092651373" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" minWidth="10.0" prefWidth="214.8" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" minWidth="10.0" prefWidth="28.80000000000004" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="265.0" minWidth="10.0" prefWidth="209.19999999999993" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="214.0" minWidth="10.0" prefWidth="21.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="214.0" minWidth="10.0" prefWidth="176.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="138.4" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="292.8" minHeight="10.0" prefHeight="182.8" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="198.40000000000003" minHeight="10.0" prefHeight="198.40000000000003" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Label fx:id="risulatoCalc" prefHeight="60.0" prefWidth="222.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+      <TextField fx:id="valore1" promptText="Inserire Valore 1" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <font>
+            <Font name="LiSu" size="20.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="valore2" prefHeight="26.0" prefWidth="136.0" promptText="Inserire Valore 2" GridPane.columnIndex="3" GridPane.rowIndex="1">
+         <font>
+            <Font name="LiSu" size="20.0" />
+         </font>
+      </TextField>
+      <Label fx:id="titolo" prefHeight="18.0" prefWidth="191.0" text="Calcolatrice" GridPane.columnIndex="1" />
+      <Label fx:id="risultato" alignment="CENTER" prefHeight="62.0" prefWidth="345.0" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="2">
+         <font>
+            <Font name="LiSu" size="20.0" />
+         </font></Label>
+      <Label alignment="CENTER_RIGHT" prefHeight="41.0" prefWidth="214.0" text="Risultato :" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <font>
+            <Font name="LiSu" size="20.0" />
+         </font></Label>
+      <VBox alignment="CENTER" prefHeight="211.0" prefWidth="106.0" scaleShape="false" GridPane.columnIndex="5" GridPane.rowIndex="1">
+         <children>
+            <Button fx:id="piuBottom" mnemonicParsing="false" prefHeight="43.0" prefWidth="103.0" text="+" />
+            <Button fx:id="menoBottom" mnemonicParsing="false" prefHeight="38.0" prefWidth="102.0" text="-" />
+            <Button fx:id="perBottom" mnemonicParsing="false" prefHeight="41.0" prefWidth="101.0" text="x" />
+            <Button fx:id="divisoBottom" mnemonicParsing="false" prefHeight="45.0" prefWidth="100.0" text="/" />
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="5" GridPane.rowIndex="2">
+         <children>
+            <Button fx:id="invioRIsultatoBottom" mnemonicParsing="false" prefHeight="198.0" prefWidth="103.0" text="=" />
+         </children>
+      </VBox>
+   </children>
+</GridPane>
